@@ -20,25 +20,36 @@ function getComputerChoice() {
 };
 
 function getHumanChoice() {
-    humanChoice = prompt("Choice: Rock, Paper, or Scissors")
+    humanChoice = prompt("Choose: Rock, Paper, or Scissors")
     return humanChoice
 };
 
 function playRound(humanChoice,computerChoice) {
-if (arguments[0] == arguments[1]) {
-    return `It's a tie!`}
-else if (arguments[0] = `Rock` && arguments[1] != `Paper`) {
+if (humanChoice == computerChoice) {
+    return `It's a tie!`
+}
+else if (humanChoice = `Rock` && computerChoice != `Paper`) {
     return `Player Wins!`
 }
-else if (arguments[0] = `Paper` && arguments[1] != `Scissors`) {
+else if (humanChoice = `Paper` && computerChoice != `Scissors`) {
     return `Player Wins!`
 }
-else if (arguments[0] = `Scissors` && arguments[1] != `Rock`) {
+else if (humanChoice = `Scissors` && computerChoice != `Rock`) {
     return `Player Wins!`
 }
-else if 
+else if (computerChoice = `Rock` && humanChoice != `Paper`) {
+    return `Computer Wins!`
+}
+else if (computerChoice = `Paper` && humanChoice != `Scissors`) {
+    return `Computer Wins!`
+}
+else if (computerChoice = `Scissors` && humanChoice != `Rock`) {
+    return `Computer Wins!`
+}
 };
 
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
+playRound(humanSelection,computerSelection);
