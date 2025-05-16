@@ -2,6 +2,8 @@ let computerChoice = 'none'
 let humanChoice = `none`
 let humanScore = 0
 let computerScore = 0
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 function getComputerChoice() {
     let randomNumber = Math.random()
@@ -47,9 +49,5 @@ else if (computerChoice = `Scissors` && humanChoice != `Rock`) {
     return `Computer Wins!`
 }
 };
-
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 playRound(humanSelection,computerSelection);
